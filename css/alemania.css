@@ -1,0 +1,371 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000; 
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    justify-content: center;
+}
+
+.body-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    z-index: -2;
+}
+
+.map {
+    filter: grayscale(100%) invert(92%) contrast(93%);
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../imagenes/banderaalemania.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transition: opacity 0.5s;
+}
+
+.header {
+    background: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    text-align: left;
+    transition: background 0.3s;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.introduction p {
+    text-align: center;
+}
+
+.video-config {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.video-config iframe {
+    margin-top: 20px;
+}
+
+.video-config h2 {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px; 
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; 
+    margin-right: 20px;
+}
+
+.menu-container a {
+    color: #ffffff; 
+    margin-left: 20px; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-container a:hover {
+    color: #ff8c00; 
+}
+
+.header nav {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+
+}
+
+nav a {
+    color: #D35400; 
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff8c00; 
+}
+
+main {
+    padding: 120px 20px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* links para los paises */
+#country-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    gap: 20px;
+    padding-top: 500px;
+}
+
+.country-link {
+    background-color: #1a1a1a; 
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.9s;
+
+    background-position: center;
+}
+
+.country-link:hover {
+    transform: scale(1.05);
+}
+
+.country-link a {
+    color: #bbafa7; 
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.country-link p {
+    color: #cccccc; 
+    font-weight: bold;
+    margin: 10px;
+}
+
+.country-link h2 {
+    color: #ffffff;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.country-link img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.container-carousel {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carruseles {
+    width: 300%;
+    height: 100%;
+    display: flex;
+
+}
+
+.slider-section {
+    width: calc(100%/3);
+    height: 100%;
+
+}
+
+.slider-section img{
+width: 500px;
+height: 100%;
+object-fit: cover;
+border-radius: 15px;
+
+}
+
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81; 
+    transform: translate(0, -50%);
+    transition: .5s ease;
+    user-select: none;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: #333333d4;
+    color: #fff;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: -10px;
+    font-size: 3em;
+    font-family: 'Arial Black', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Arial', sans-serif;
+    color: #ff8c00;
+    margin-top: -10px;
+    padding-bottom: 70px;
+}
+
+.submenu {
+    position: relative;
+    display: inline-block;
+}
+
+.submenu-content {
+    display: none;
+    left: 0;
+    position: absolute;
+    background-color: #292828;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transform: translateX(-85%);
+}
+
+#icono-menu {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.submenu-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu-content a:hover {
+    background-color: #111111;
+    transition: all ease-in-out 0.3s;
+}
+
+.submenu:hover .submenu-content {
+    display: block;
+}
+
+.introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    text-align: left;
+    background-color: #080808;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.introduction p {
+    flex: 1;
+    margin-right: 20px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+.imagen-aside {
+    flex: 0 0 400px; 
+    text-align: center;
+}
+
+.imagen-aside img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.espacio {
+    margin-top: 200px;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.carousel-title {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+    color: #e0e0e0;
+    font-family: 'Arial Black', sans-serif;
+}
